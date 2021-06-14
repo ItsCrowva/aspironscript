@@ -1,0 +1,73 @@
+-- Aspscript
+# Heya! This is the Aspiron Script Example code.
+# What this does is it will go through a bunch of different aspects of the Asiron Script Language.
+# This will grow over time and also include some concept parts.
+# Lets go through the code.
+
+# ------------------------------------------------------------------------
+#
+#        Minescript - This is to turn code into data packs
+#
+#      This follows Minescript 2.0 This won't work with the
+#              included backward compat conversion
+#
+#   Some limitations:
+#     - Please refrain from using multiple of the same file name
+#     - You'll need to delete a space between the first and last { } upon file generation
+#     - You can not tag/comment mid line. Have all comments on the line after
+#
+# ------------------------------------------------------------------------
+
+# This initialises the script. This adds instructures for setup in the instruction part
+#
+# at the very bottom of the log file.
+# This also eventually will be used to help the converter build the data pack for you
+
+MineSetup: 
+  Settings: 
+    pack_format 
+    7 
+    description 
+    Example 
+    # just put nothing if you don't want anything
+
+
+Set 6-Way Value:
+  000000
+  000000
+  000000
+  000000
+  000000
+  000000
+
+
+InDirectory: 
+# Create base directory. The code will put everything in the last defined directory
+  Dir: 
+    Settings: 
+      minecraft
+      # Folder name
+
+MakeFolder:
+  testfolder
+  InFolder:
+    MakeJSON:
+    Plains
+    InFile[
+      4
+      # The above number 
+      # Subscript test
+      # The goal of this is to have a non json like language
+      # please work
+    ]
+
+Define Function:
+  Test
+  InFile[
+    6
+
+  ]
+
+# End tells the file to do the end functions.
+# This usually means generate log
+end
